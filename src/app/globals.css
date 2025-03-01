@@ -22,3 +22,159 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Style dasar navbar */
+.navbar {
+  position: absolute;
+  top: 20px; /* Memberi jarak dari atas */
+  left: 50%;
+  transform: translateX(-50%); /* Pusatkan navbar */
+  width: 90%; /* Sesuaikan lebar agar tidak menempel */
+  max-width: 1200px; /* Batas maksimum lebar navbar */
+  background-color: rgba(31, 31, 31, 0.8); /* Transparan */
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px; /* Membuat sudut membulat */
+  z-index: 20;
+}
+
+
+
+/* styles/globals.css */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb; /* Warna latar belakang jika gambar gagal dimuat */
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Transparansi 50% */
+}
+
+.hero-text {
+  position: absolute;
+  left: 21%;
+  transform: translate(-50%, -50%); /* Memposisikan teks ke tengah */
+  text-align: left;
+  color: white;
+  /* background: rgba(0, 0, 0, 0.6); Transparan gelap di belakang teks */
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+
+.section {
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.about {
+  background-color: white;
+}
+
+.features {
+  background-color: #f3f4f6; /* bg-gray-100 */
+}
+
+.feature-box {
+  padding: 1.25rem;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  width: 30%;
+}
+
+.contact {
+  background-color: #3b82f6; /* bg-blue-500 */
+  color: white;
+}
+
+
+/* Menu List */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Tombol Hamburger */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive untuk HP */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #1f1f1f;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+}
+
+
+
