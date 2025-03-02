@@ -19,7 +19,7 @@ export default function Home() {
       </div>
 
       {/* Section 2: About */}
-      <section className="section about">
+      <section className="section card">
         <h2 className="text-3xl font-bold">Tentang Kami</h2>
         <p className="mt-4 text-gray-600">
           Kami menyediakan layanan terbaik untuk kebutuhan Anda.

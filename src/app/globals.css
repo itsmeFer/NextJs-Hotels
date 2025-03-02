@@ -40,6 +40,9 @@ body {
   z-index: 20;
 }
 
+.card{
+  background-color: #3b82f6;
+}
 
 
 /* styles/globals.css */
